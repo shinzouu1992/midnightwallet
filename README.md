@@ -5,13 +5,18 @@ VERIFIED_ROLE_ID=       # Role ID to assign after verification
 VERIFICATION_SERVER=     # Server URL (e.g. https://midnightpass.click)
 ```
 
-## Project Structure
-
+2. Server directory (`server/.env`):
+```env
+DISCORD_TOKEN=           # Same Discord bot token as root
+VERIFICATION_CHANNEL_ID= # Same channel ID as root
+GUILD_ID=               # Same guild ID as root
+VERIFIED_ROLE_ID=       # Same role ID as root
+VERIFICATION_SERVER=     # Same server URL as root
 ```
-├── client/             # Frontend React application
-├── server/             # Backend Express server + Discord bot
-├── shared/             # Shared types and schemas
-└── scripts/            # Utility scripts
+
+3. Client directory (`client/.env`):
+```env
+VITE_BOT_API_URL=       # Your API URL (e.g. https://midnightpass.click)
 ```
 
 ## Setup Instructions
@@ -21,78 +26,43 @@ VERIFICATION_SERVER=     # Server URL (e.g. https://midnightpass.click)
 npm install
 ```
 
-2. Set up environment variables in `.env`
+2. Run setup check:
+```bash
+npm run check-setup
+```
 
 3. Start development server:
 ```bash
 npm run dev
 ```
 
-## Development Guidelines
+## Project Structure
 
-- Use TypeScript for type safety
-- Follow ESLint configurations
-- Write comprehensive tests
-- Document code changes
-- Use conventional commits
-
+```
+├── client/             # Frontend React application
+├── server/             # Backend Express server + Discord bot
+├── shared/             # Shared types and schemas
+└── scripts/            # Utility scripts
+```
 
 ## API Endpoints
 
-### POST /api/verify/initiate
-Initiates verification process
-
-### POST /api/verify/complete  
-Completes verification and assigns role
-
-### GET /api/verify/:discordId
-Gets verification status for user
+- `POST /api/verify/initiate` - Start verification
+- `POST /api/verify/complete` - Complete verification
+- `GET /api/verify/:discordId` - Check verification status
 
 
-## Security Considerations
+## Troubleshooting
 
-- Secure storage of Discord tokens
-- Validation of wallet signatures
-- Rate limiting on API endpoints
-- Proper error handling
-
-## 🔧 Troubleshooting Guide
-### Common Issues
-
-1. Wallet Detection Failed
-   - Check wallet installation
-   - Verify browser compatibility
-   - Clear browser cache
-   - Restart browser
-
-2. Role Assignment Failed
+1. Bot not responding:
+   - Check DISCORD_TOKEN is correct
    - Verify bot permissions
-   - Check role hierarchy
-   - Confirm server settings
-   - Review error logs
+   - Ensure bot is in server
 
-3. Verification Timeout
-   - Check network connection
-   - Verify server status
-   - Clear browser cache
-   - Try again later
-
-### Error Messages
-
-1. "Wallet Not Found"
-   - Install Midnight Lace Wallet
-   - Check browser compatibility
-   - Enable wallet extension
-
-2. "Connection Failed"
-   - Verify network connection
-   - Check wallet status
-   - Try reconnecting
-
-3. "Role Assignment Failed"
-   - Contact server admin
+2. Role assignment fails:
+   - Check VERIFIED_ROLE_ID
+   - Verify bot role hierarchy
    - Check bot permissions
-   - Verify role settings
 
 ## 🏗️ Technical Architecture
 
