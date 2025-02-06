@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <replit_final_file>
+=======
+>>>>>>> 25a215d9edcfb9231a36548ce6d72e8e4f8c7ef2
 # Dependencies
 node_modules/
 .npm/
@@ -34,4 +37,8 @@ generated-icon.png
 *.swo
 
 # Logs and databases
+<<<<<<< HEAD
 *.sqlite
+=======
+*.sqlite
+>>>>>>> 25a215d9edcfb9231a36548ce6d72e8e4f8c7ef2
