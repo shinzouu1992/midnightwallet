@@ -1,47 +1,36 @@
-
 # Dependencies
-node_modules
-dist
+node_modules/
+.npm/
+dist/
+build/
 
 # Environment and secrets
 .env
 .env.*
 
-# Build artifacts
-build
-*.log
-*.tar.gz
-
-# IDE and editor files
-.vscode
-.idea
-*.swp
-*.swo
-
-# Replit specific (exclude from git)
+# Replit specific
 .replit
 replit.nix
 .config/
 .upm/
-.cache/
-.npm/
 .breakpoints
-.local
-.nix-profile
+.cache/
+.local/
 .git-credentials
 .bash_history
-
-# Replit specific files
-.config/
-.replit
-replit.nix
 theme.json
 generated-icon.png
+.nix-profile/
 
-# Generated files
-dist/
-build/
+# Build artifacts
+*.log
+*.tar.gz
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
 
 # Logs and databases
-*.log
 *.sqlite
