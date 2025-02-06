@@ -31,8 +31,16 @@ replit.nix
 .git-credentials
 .bash_history
 
-# Generated files
+# Replit specific files
+.config/
+.replit
+replit.nix
+theme.json
 generated-icon.png
+
+# Generated files
+dist/
+build/
 
 # Logs and databases
 *.log
