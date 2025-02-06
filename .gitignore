@@ -1,0 +1,39 @@
+
+# Dependencies
+node_modules
+dist
+
+# Environment and secrets
+.env
+.env.*
+
+# Build artifacts
+build
+*.log
+*.tar.gz
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+
+# Replit specific (exclude from git)
+.replit
+replit.nix
+.config/
+.upm/
+.cache/
+.npm/
+.breakpoints
+.local
+.nix-profile
+.git-credentials
+.bash_history
+
+# Generated files
+generated-icon.png
+
+# Logs and databases
+*.log
+*.sqlite
